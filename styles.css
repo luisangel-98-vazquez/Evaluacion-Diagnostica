@@ -1,0 +1,118 @@
+body {
+    background-image: url("https://external-preview.redd.it/ttWwMRs3N49_y4lDjcrQJLA2oJYi9Xw3YDWnfCSen4E.jpg?auto=webp&s=77cc46293cddc3fe8a21f48d3d973c47ff021289");
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px gray;
+    text-decoration: underline;
+    /*color: blue;*/
+    margin: 0px;
+}
+
+p {
+    padding: 5px;
+    line-height: 1.8;
+}
+
+.container {
+    position: relative;
+    /*float:inline-end;*/
+    border-style: groove;
+    border-color: black;
+    background-color: rgb(255, 255, 255, 0.8);
+    max-width: 90%;
+    max-height: 90%;
+    padding: 10px;
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-voleibol {
+    float: left;
+    border-style: groove;
+    border-color: black;
+    width: 95%;
+    height: 80%;
+    padding: 15px;
+    margin: 5px;
+}
+
+.container-collage {
+    float: right;
+    width: 95%;
+    height: 80%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.container-collage .img-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container-collage .img-content .imagen {
+    height: 250px;
+    width: 350px;
+    border-style: groove;
+    border-color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container-collage .img-content .imagen img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: .2s linear;
+}
+
+.container-collage .img-content .imagen:hover img {
+    transform: scale(1.1);
+}
+
+.container .popup-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.container .popup-img span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.container .popup-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
+@media (max-width:768px) {
+    .container .popup-img img {
+        width: 95%;
+    }
+}
